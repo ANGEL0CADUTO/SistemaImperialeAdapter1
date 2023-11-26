@@ -9,7 +9,7 @@ public class Main {
         // Creazione istanze GrandezzeImperiali con i corrispettivi Adapter
         GrandezzaImperiale lunghezza = new GrandezzaImperiale(10.0, convertitoreMigliaToKilometri);
         GrandezzaImperiale massa = new GrandezzaImperiale(5.0, convertitoreLibbreToChilogrammi);
-        GrandezzaImperiale temperatura = new GrandezzaImperiale(112.0,convertitoreFahrenheitToCelsius);
+        GrandezzaImperiale temperatura = new GrandezzaImperiale(100.0,convertitoreFahrenheitToCelsius);
 
 
         // Stampa delle grandezze originali e di quelle convertite
