@@ -1,26 +1,31 @@
 public class Main {
     public static void main(String[] args) {
 
-        // Creazione degli Adapter
-        SistemaImperialeAdapter convertitoreMigliaToKilometri = new SistemaImperialeAdapter("miglia");
-        SistemaImperialeAdapter convertitoreLibbreToChilogrammi = new SistemaImperialeAdapter("libbre");
-        SistemaImperialeAdapter convertitoreFahrenheitToCelsius = new SistemaImperialeAdapter("fahrenheit");
+        // Creazione istanze di grandezze imperiali
+        LunghezzaImperiale lunghezza = new LunghezzaImperiale(10);
+        MassaImperiale massa = new MassaImperiale(85);
+        TemperaturaImperiale temperatura = new TemperaturaImperiale(46);
 
-        // Creazione istanze GrandezzeImperiali con i corrispettivi Adapter
-        GrandezzaImperiale lunghezza = new GrandezzaImperiale(10.0, convertitoreMigliaToKilometri);
-        GrandezzaImperiale massa = new GrandezzaImperiale(5.0, convertitoreLibbreToChilogrammi);
-        GrandezzaImperiale temperatura = new GrandezzaImperiale(100.0,convertitoreFahrenheitToCelsius);
+        // Creazione istanze Adapter
+        SistemaImperialeAdapter s1 = new SistemaImperialeAdapter(lunghezza);
+        SistemaImperialeAdapter s2 = new SistemaImperialeAdapter(massa);
+        SistemaImperialeAdapter s3 = new SistemaImperialeAdapter(temperatura);
 
 
         // Stampa delle grandezze originali e di quelle convertite
-        System.out.println("Lunghezza: " + lunghezza.getValore() + " " + lunghezza.getUnitaDiMisura());
-        System.out.println("Lunghezza convertita: " + lunghezza.getValoreConvertito() );
+        System.out.println("Lunghezza iniziale: " + lunghezza.getValoreImperiale() + " " + lunghezza.getUnitaDiMisuraImperiale());
+        System.out.println("Lunghezza convertita: " + s1.getValoreInternazionale() + " " + s1.getUnitaDiMisuraInternazionale() );
 
-        System.out.println("Massa: " + massa.getValore()+ " " + massa.getUnitaDiMisura());
-        System.out.println("Massa convertita: " + massa.getValoreConvertito());
+        System.out.println("Massa iniziale: " + massa.getValoreImperiale()+ " " + massa.getUnitaDiMisuraImperiale());
+        System.out.println("Massa convertita: " + s2.getValoreInternazionale() + " " + s2.getUnitaDiMisuraInternazionale());
 
-        System.out.println("Temperatura: " + temperatura.getValore() + " " + temperatura.getUnitaDiMisura());
-        System.out.println("Temperatura convertita: " + temperatura.getValoreConvertito()  );
+        System.out.println("Temperatura iniziale: " + temperatura.getValoreImperiale() + " " + temperatura.getUnitaDiMisuraImperiale());
+        System.out.println("Temperatura convertita: " + s3.getValoreInternazionale() + " " + s3.getUnitaDiMisuraInternazionale());
+
+
+
+
+
 
     }
 }
