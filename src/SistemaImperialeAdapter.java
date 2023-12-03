@@ -1,7 +1,7 @@
 public class SistemaImperialeAdapter implements SistemaInternazionaleInterface {
 
     //ATTRIBUTI
-    private GrandezzaInternazionale grandezzaInternazionale;
+    private SistemaInternazionaleInterface grandezzaInternazionale;
 
     //COSTRUTTORE
     public SistemaImperialeAdapter(SistemaImperialeInterface grandezzaImperiale) {
