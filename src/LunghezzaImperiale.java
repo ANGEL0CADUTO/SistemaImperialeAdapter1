@@ -1,8 +1,8 @@
 public class LunghezzaImperiale implements SistemaImperialeInterface {
 
     //ATTRIBUTI
-    private double misuraImperiale;
-    private String unitaDiMisuraImperiale;
+    private final double misuraImperiale;
+    private final String unitaDiMisuraImperiale;
 
 
     //COSTRUTTORE

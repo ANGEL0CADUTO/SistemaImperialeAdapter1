@@ -1,8 +1,8 @@
 public class MassaImperiale implements SistemaImperialeInterface{
 
     //ATTRIBUTI
-    private double valoreImperiale;
-    private String unitaDiMisura;
+    private final double valoreImperiale;
+    private final String unitaDiMisura;
 
 
     //COSTRUTTORE

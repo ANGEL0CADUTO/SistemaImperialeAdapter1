@@ -1,8 +1,8 @@
 public class TemperaturaImperiale implements SistemaImperialeInterface{
 
     //ATTRIBUTI
-    private double valoreImperiale;
-    private String unitaDiMisuraImperiale;
+    private final double valoreImperiale;
+    private final String unitaDiMisuraImperiale;
 
     //COSTRUTTORE
     public TemperaturaImperiale(double valoreImperiale){
